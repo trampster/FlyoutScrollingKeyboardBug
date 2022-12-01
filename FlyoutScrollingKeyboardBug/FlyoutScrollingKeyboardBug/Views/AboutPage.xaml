@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlyoutScrollingKeyboardBug.Views.AboutPage"
+             xmlns:vm="clr-namespace:FlyoutScrollingKeyboardBug.ViewModels"
+             Title="{Binding Title}">
+    
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Text="1. Tap the text entry below to bring up the keyboard" />
+        <Entry Grid.Row="1" Placeholder="tap me"></Entry>
+        <Label Grid.Row="3" Text="2. Navigate back to the flyout and notice the flyout content is now rendered over the header" />
+    </Grid>
+
+</ContentPage>
+

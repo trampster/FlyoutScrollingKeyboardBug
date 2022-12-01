@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:FlyoutScrollingKeyboardBug.Views"
+       Title="FlyoutScrollingKeyboardBug"
+       x:Class="FlyoutScrollingKeyboardBug.AppShell"
+       FlyoutHeaderBehavior="Fixed"
+       FlyoutVerticalScrollMode="Enabled">
+
+    <FlyoutItem Title="About" Icon="icon_about.png">
+        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
+    </FlyoutItem>
+
+    <Shell.FlyoutHeader>
+        <StackLayout Orientation="Vertical" BackgroundColor="#55009900" HeightRequest="100">
+            <Label Text="Flyout Header" FontSize="30" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" VerticalOptions="FillAndExpand"/>
+        </StackLayout>
+    </Shell.FlyoutHeader>
+
+    <Shell.FlyoutContent>
+        <ScrollView VerticalOptions="FillAndExpand" VerticalScrollBarVisibility="Default">
+            <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
+                <Label Text="Flyout Content" FontSize="20" HorizontalTextAlignment="Center"/>
+                <Label Text="Flyout Content line 1"/>
+                <Label Text="Flyout Content line 2"/>
+                <Label Text="Flyout Content line 3"/>
+                <Label Text="Flyout Content line 4"/>
+                <Label Text="Flyout Content line 5"/>
+                <Label Text="Flyout Content line 6"/>
+                <Label Text="Flyout Content line 7"/>
+            </StackLayout>
+        </ScrollView>
+    </Shell.FlyoutContent>
+
+</Shell>
+
